@@ -1,5 +1,7 @@
 <li [ngClass]="{
   'list-group-item': true,
-  'list-group-item-success': appareilStatus === 'allumé',
-  'list-group-item-danger': appareilStatus === 'éteint'
+  'list-group-item-success': post.loveIts > 0,
+  'list-group-item-danger': post.loveIts < 0
 }">
+
+</li>
