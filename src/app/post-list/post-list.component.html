@@ -1,7 +1,15 @@
-<li [ngClass]="{
-  'list-group-item': true,
-  'list-group-item-success': post.loveIts > 0,
-  'list-group-item-danger': post.loveIts < 0
-}">
-
-</li>
+<div class="container">
+  <div class="row">
+    <div class="col-12">
+      <h2>Mes posts</h2>
+      <ul class="list-group">
+        <app-post-list-item *ngFor="let post of arrayPost"
+                            [postTitle]="post.title"
+                            [postContent]="post.content"
+                            [postLikeElt]="post.loveIts">
+        </app-post-list-item>
+      </ul>
+      <button class="btn btn-success">Tout allumer</button>
+    </div>
+  </div>
+</div>
